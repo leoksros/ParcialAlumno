@@ -72,6 +72,7 @@ namespace Miceli.Escritorio
                     db.Agregar(alumno);
 
                     MessageBox.Show("Alumno creado satisfactoriamente");
+                    this.Close();
                 }
                 catch (Exception e)
                 {

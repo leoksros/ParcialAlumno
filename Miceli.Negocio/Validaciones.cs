@@ -26,7 +26,7 @@ namespace Miceli.Negocio
             return true;
         }
 
-        public static bool EsNotaValida(decimal nota)
+        public static bool EsNotaValida(decimal? nota)
         {
             if (nota < 0 && nota > 10)
             {
