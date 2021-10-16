@@ -12,9 +12,11 @@ namespace Miceli.Escritorio
 {
     public partial class Alta : Form
     {
+        public Alta AltaActual { get; set; }
         public Alta()
         {
             InitializeComponent();
+            
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
@@ -38,7 +40,7 @@ namespace Miceli.Escritorio
             {
                 validaciones = validaciones + "DNI \n";
             }
-            if (Miceli.Negocio.Validaciones.EsMailValido(this.textEmail.Text.ToString()))
+            if (!Miceli.Negocio.Validaciones.EsMailValido(this.textEmail.Text.ToString()))
             {
                 validaciones = validaciones + "Email \n";
             }

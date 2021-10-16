@@ -12,7 +12,8 @@ namespace Miceli.Negocio
         public static bool EsMailValido(string mail)
         {
             string regExp = "^(([^<>()\\[\\]\\.,;:\\s@”]+(\\.[^<>()\\[\\]\\.,;:\\s@”]+)*)|(“.+”))@((\\[[0–9]{1,3}\\.[0–9]{1,3}\\.[0–9]{1,3}\\.[0–9]{1,3}])|(([a-zA-Z\\-0–9]+\\.)+[a-zA-Z]{2,}))$";
-            return Regex.IsMatch(mail, regExp);
+            bool rta = Regex.IsMatch(mail, regExp);
+            return rta;
         }
 
         public static bool EsTextBoxValido(string input)
