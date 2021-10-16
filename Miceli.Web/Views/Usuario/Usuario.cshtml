@@ -1,0 +1,44 @@
+﻿@model Miceli.Entidades.Alumno
+
+@{
+    ViewBag.Title = "Usuario";
+}
+
+<h2>Usuario</h2>
+
+<div>
+    <h4>Alumno</h4>
+    <hr />
+    @using (Html.BeginForm("Usuario", "Usuario", FormMethod.Post, new { dni = Model.Dni }))
+    {
+
+        @ViewBag.ErrorMessage
+        @Html.LabelFor(model => model.Dni)
+        @Html.TextBoxFor(model => model.Dni)
+        <button type="submit">Recuperar</button>
+
+        <br />
+        <br />
+
+        @Html.LabelFor(model => model.ApellidoNombre)
+        @Html.TextBoxFor(model => model.ApellidoNombre)
+        <br />
+        <br />
+
+        @Html.LabelFor(model => model.Email)
+        @Html.TextBoxFor(model => model.Email)
+        <br />
+        <br />
+
+        @Html.LabelFor(model => model.FechaNacimiento)
+        @Html.TextBoxFor(model => model.FechaNacimiento)
+        <br />
+        <br />
+
+        @Html.LabelFor(model => model.NotaPromedio)
+        @Html.TextBoxFor(model => model.NotaPromedio)
+
+
+    }
+</div>
+
